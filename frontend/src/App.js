@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main>
+      <main className="py-3">
         <Container>
           <h2>Proshop</h2>
         </Container>
