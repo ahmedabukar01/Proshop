@@ -12,7 +12,7 @@ detenv.config()
 
 connectDB();
 
-const importData = ()=>{
+const importData = async ()=>{
     try {
         await Order.deleteMany();
         await Product.deleteMany();
@@ -29,7 +29,7 @@ const importData = ()=>{
 
         console.log('Data Imported!'.green.inverse);
 
-        process.exit(1);
+        process.exit();
 
     } catch (error) {
         console.error(`${error}`.red.inverse);
@@ -37,7 +37,7 @@ const importData = ()=>{
     }
 }
 
-const destroyData = ()=>{
+const destroyData = async ()=>{
     try {
         await Order.deleteMany();
         await Product.deleteMany();
@@ -45,7 +45,7 @@ const destroyData = ()=>{
 
         console.log('Data Destroyed!'.red.inverse);
 
-        process.exit(1);
+        process.exit();
 
     } catch (error) {
         console.error(`${error}`.red.inverse);
@@ -58,3 +58,4 @@ if(process.argv[2] === '-d'){
 } else{
     importData();
 }
+
