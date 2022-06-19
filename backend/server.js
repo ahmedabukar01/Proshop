@@ -1,6 +1,6 @@
 import express from 'express';
 import colors from 'colors';
-import {notFound, errorHandler} from './middlewares/errorMiddleware';
+import {notFound, errorHandler} from './middlewares/errorMiddleware.js';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import productRoutes from './routes/productRoutes.js'
